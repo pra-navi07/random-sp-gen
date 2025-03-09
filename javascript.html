@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-box{
+           width: 100vw;
+           min-height: 120vh;
+            /* background-color: rgb(240, 230, 216); */
+            background: #1f4037;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+        .head{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: initial;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box d-flex  justify-content-center align-items-center flex-column">
+        
+      <h1 class="head text-center">Random Super Power Generator</h1>
+      
+      <div id="div-0" class="d-flex flex-column justify-content-center align-items-center">
+        <p class="fs-3">
+            CLICK TO CHOOSE YOUR SUPERPOWER
+        </p>
+      </div>
+
+        <div id ="div-one" class="d-flex flex-column justify-content-center align-items-center d-none">
+            <img src="sp1.png" alt="" width="300px" class="rounded">
+            <h3 >Healing</h3>
+            <p class="text-center fs-5">Healing superpower refers to the ability of a character to heal themselves or others. This superpower may include some component of empathy. Regeneration may also include regrowth, allowing the character to heal the natural world. A character with healing factor will bounce back from severe injuries that other beings can't, often with no scars or medical treatment.</p>
+        </div>
+        <div  id="div-two" class="d-none d-flex flex-column justify-content-center align-items-center">
+            <img src="sp2.png" alt=""  height="400px" width="300px" class="rounded">
+            <h3>Teleporting</h3>
+            <p class="text-center fs-5">Teleportation is a superpower that allows you to instantly travel to any location, travel through solid objects, and travel to other dimensions. It is also a very energy-efficient form of travel, as it requires no fuel and produces no pollution. Teleportation can accomplish most perks from other popular superpowers, such as flying and invisibility</p>
+        </div>
+        <div  id="div-three" class="d-none d-flex flex-column justify-content-center align-items-center">
+            <img src="sp3.png" alt="" height="400px" width="300px"    class="rounded">
+            <h3>Mind reading</h3>
+            <p class="text-center fs-5">Mind reading, also known as telepathy, is a supernatural power that allows people to access the thoughts and feelings of others without them having to say anything. Characters with this ability can read another person's thoughts and communicate with them mentally.</p>
+        </div>
+        <div  id="div-four" class="d-none">
+            <!-- <img src="sp4.png" alt="" height="300px" class="rounded"> -->
+            <p class="fs-3">TRY AGAIN!!!</p>
+        </div>
+        <button class="btn btn-dark" id="button0" onclick="change0()">click to generate</button>
+        <button class="btn btn-dark d-none" id="button1" onclick="change1()">click to generate</button>
+        <button class="btn btn-dark d-none" id="button2" onclick="change2()">click to generate</button>
+        <button class="btn btn-dark d-none" id="button3" onclick="change3()">click to generate</button>
+        <button class="btn btn-dark d-none" id="button4" onclick="change4()">click to generate</button>
+    </div>
+
+    <script>
+        function change0(){
+            document.getElementById('div-0').classList.toggle('d-none');
+            document.getElementById('div-one').classList.toggle('d-none');
+             document.getElementById('button0').classList.toggle('d-none');
+             document.getElementById('button1').classList.toggle('d-none');
+
+            
+        }
+        function change1(){
+            document.getElementById('div-one').classList.toggle('d-none');
+            document.getElementById('div-two').classList.toggle('d-none');
+            document.getElementById('button1').classList.toggle('d-none');
+            document.getElementById('button2').classList.toggle('d-none');
+             
+        }
+        function change2(){
+            document.getElementById('div-two').classList.toggle('d-none');
+            document.getElementById('div-three').classList.toggle('d-none');
+            document.getElementById('button2').classList.toggle('d-none');
+            document.getElementById('button3').classList.toggle('d-none');
+             
+        }
+        function change3(){
+            document.getElementById('div-three').classList.toggle('d-none');
+            document.getElementById('div-four').classList.toggle('d-none');
+            document.getElementById('button3').classList.toggle('d-none');
+            document.getElementById('button4').classList.toggle('d-none');
+        }
+        
+
+    </script>
+
+
+
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
